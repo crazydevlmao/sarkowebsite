@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ATHENA</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
 
@@ -43,7 +44,7 @@
       justify-content: center;
       align-items: flex-start;
       gap: 2rem;
-      margin: 1rem 0 1.2rem;
+      margin: 20px 0 1.2rem;
       margin-top: 2rem;
     }
 
@@ -135,13 +136,11 @@
       pointer-events: auto;
     }
 
-    .logo {
+    .logo img {
       width: 100px;
       height: 100px;
       border-radius: 50%;
       margin-bottom: 1.2rem;
-      background: #444;
-      display: inline-block;
     }
 
     .agent-name {
@@ -157,6 +156,24 @@
     .pnl.green { color: #00ff88; }
     .pnl.red { color: #ff3366; }
 
+    .beta-tag {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: red;
+      color: white;
+      font-size: 0.9rem;
+      padding: 5px 10px;
+      border-radius: 4px;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 1; }
+      50% { opacity: 0.5; }
+      100% { opacity: 1; }
+    }
+
     footer {
       text-align: center;
       padding: 1rem;
@@ -164,6 +181,18 @@
       animation: wave 3s infinite ease-in-out;
       color: #999;
       margin-top: auto;
+    }
+
+    .twitter-link {
+      display: inline-block;
+      margin-left: 10px;
+      vertical-align: middle;
+    }
+
+    .twitter-link img {
+      width: 18px;
+      height: 18px;
+      vertical-align: middle;
     }
 
     @keyframes wave {
@@ -181,14 +210,15 @@
   </style>
 </head>
 <body>
+  <div class="beta-tag">BETA</div>
   <div class="main">
-    <div style="text-align:center; padding-top: 2.6rem; margin-bottom: 20px;"><div style="width: 100px; height: 100px; border-radius: 50%; background: #333; margin: 0 auto;"></div></div>
+    <div style="text-align:center; padding-top: 2.6rem; margin-bottom: 20px;"><img src="logo.png" alt="Logo" style="width: 100px; height: 100px; border-radius: 50%; margin: 0 auto; display: block;"></div>
 
     <div class="card-container">
       <div class="card">
         <div class="info">i</div>
-        <div class="tooltip">Arthemis is an AI agent specialized in monitoring X data from top-performing accounts and high-impact volume/wallet tracking tools. It has been trained on thousands of tweets and makes decisions based on real-time Twitter confluence.</div>
-        <div class="logo"></div>
+        <div class="tooltip">Arthemis is an AI agent specialized in monitoring X data...</div>
+        <div class="logo"><img src="Arthemis.png" alt="Arthemis" /></div>
         <div class="agent-name">Arthemis</div>
         <div class="balance">Balance: ...</div>
         <div class="pnl">PNL: ...</div>
@@ -196,8 +226,8 @@
       </div>
       <div class="card">
         <div class="info">i</div>
-        <div class="tooltip">Zeus is an AI agent specialized in monitoring on-chain data from high-performing smart wallets trading low-cap pairs. It makes decisions based on confluence across thousands of successful on-chain trades, leveraging insights from over 500 top wallets tracked over the past 60 days.</div>
-        <div class="logo"></div>
+        <div class="tooltip">Zeus is an AI agent specialized in monitoring on-chain data...</div>
+        <div class="logo"><img src="Zeus.png" alt="Zeus" /></div>
         <div class="agent-name">Zeus</div>
         <div class="balance">Balance: ...</div>
         <div class="pnl">PNL: ...</div>
@@ -205,8 +235,8 @@
       </div>
       <div class="card">
         <div class="info">i</div>
-        <div class="tooltip">Oracle is an AI agent that monitors public, private, and paid Telegram and Discord groups to identify where community attention is focused. By analyzing real-time discussions, it makes informed decisions and positions early—often front-running market sentiment.</div>
-        <div class="logo"></div>
+        <div class="tooltip">Oracle is an AI agent that monitors public, private...</div>
+        <div class="logo"><img src="Oracle.png" alt="Oracle" /></div>
         <div class="agent-name">Oracle</div>
         <div class="balance">Balance: ...</div>
         <div class="pnl">PNL: ...</div>
@@ -230,7 +260,12 @@
     </div>
   </div>
 
-  <footer>xxxxxxxxxx<span style="color: #00ff88; text-shadow: 0 0 5px #00ff88, 0 0 10px #00ff88;">pump</span></footer>
+  <footer>
+    xxxxxxxxxx<span style="color: #00ff88; text-shadow: 0 0 5px #00ff88, 0 0 10px #00ff88;">pump</span>
+    <a class="twitter-link" href="https://x.com/sarko_ai" target="_blank" rel="noopener noreferrer">
+      <img src="https://abs.twimg.com/icons/apple-touch-icon-192x192.png" alt="Twitter">
+    </a>
+  </footer>
 
   <script>
     const agents = ['Arthemis', 'Zeus', 'Oracle'];
